@@ -1,0 +1,69 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Transparent.master.cs"
+    Inherits="transparent.include.master.Transparent" %>
+
+<%@ Register Src="~/include/ctl/SourceViewer.ascx" TagName="SourceViewer" TagPrefix="uc2" %>
+<%@ Register Src="../ctl/stdBtmFooter.ascx" TagName="stdBtmFooter" TagPrefix="uc2" %>
+<%@ Register Src="../ctl/stdHeader.ascx" TagName="stdHeader" TagPrefix="uc3" %>
+<%@ Register Src="../ctl/stdLHM.ascx" TagName="stdLHM" TagPrefix="uc1" %>
+<%@ Register Src="../ctl/DirectoryMenuer.ascx" TagName="DirectoryMenuer" TagPrefix="uc4" %>
+<%@ Register Src="../ctl/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="uc5" %>
+<%@ Register Src="../ctl/Copyright.ascx" TagName="Copyright" TagPrefix="uc6" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="HTMLTitlePlaceHolder" runat="server" />
+    </title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/include/js/jquery-ui-1.8.16.custom.min.js"></script>
+    <script type="text/javascript" src="/include/js/DirectoryMenuer.js"></script>
+    <link rel="stylesheet" type="text/css" href="/include/css/default.css" />
+</head>
+<body>
+    <form id="form2" runat="server">
+    <div id="pageDiv">
+        <!-- Start Body Menu -->
+        <div id="bodyDiv">
+            <!-- Start Top Menu -->
+            <uc3:stdHeader ID="StdHeader1" runat="server"></uc3:stdHeader>
+            <!-- End Top Menu -->
+            <table id="bodyTable" border="1">
+                <tr>
+                    <td colspan="2">
+                        <asp:ContentPlaceHolder ID="TitlePlaceHolder" runat="server" />
+                        <uc5:Breadcrumb ID="Breadcrumb1" runat="server" />
+                        <p>
+                            <a href="#" id="AToggleFolders">Toggle Folders</a>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="tdDirMenu">
+                        <div style="width: 100%; float: left; text-align: left;">
+                            <uc4:DirectoryMenuer ID="DirectoryMenuer1" runat="server" />
+                        </div>
+                    </td>
+                    <td style="width: 85%;">
+                        <asp:Label runat="server" ID="lOut" Width="100%" />
+                        <div style="text-align: left;">
+                            <asp:ContentPlaceHolder ID="phMainBody" runat="server" />
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <%-- <uc1:stdLHM id="StdLHM1" runat="server" Visible="false" />--%>
+            <uc6:Copyright ID="Copyright1" runat="server" />
+            <asp:ContentPlaceHolder ID="phPageSpecificFooter" runat="server">
+            </asp:ContentPlaceHolder>
+            <uc2:stdBtmFooter ID="StdBtmFooter1" runat="server" />
+        </div>
+    </div>
+    </form>
+    <div id="divSourcePanel" style="">
+        <input type="button" id="btnCopySource" value="copy" />
+        <input type="button" id="btnDownloadSource" value="download" />
+        <div id="divSourceText">
+        </div>
+    </div>
+</body>
+</html>

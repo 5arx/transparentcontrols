@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Copyright.ascx.cs" Inherits="transparent.include.ctl.Copyright" %>
+<span class='copyright'>&copy; 2011 <a href="mailto:indra.sarkar@gmail.com?subject=Transparent Controls" class="copyright">Indra Sarkar</a>.</span>

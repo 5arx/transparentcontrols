@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SourceViewer.master.cs" Inherits="transparent.include.master.SourceViewer" %>
+<%@ Register src="../ctl/Copyright.ascx" tagname="Copyright" tagprefix="uc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js" ></script>
+    <script type="text/javascript" src="/include/js/SourceViewerCtl.js" language="javascript"></script>
+    <link rel="Stylesheet" type="text/css" href="/include/css/default.css" />
+    <title>SourceViewer&trade;</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div id="divSrcViewToolbar">
+            cut copy
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    <uc1:Copyright ID="Copyright1" runat="server" />
+    </form>
+    
+</body>
+</html>

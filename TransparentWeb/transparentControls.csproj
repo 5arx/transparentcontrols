@@ -1,0 +1,986 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{716A8405-205B-4FB2-B3D5-69BC7569C833}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>transparent</RootNamespace>
+    <AssemblyName>transparentControls</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <FilesToIncludeForPublish>AllFilesInTheProject</FilesToIncludeForPublish>
+    <ExcludeGeneratedDebugSymbol>true</ExcludeGeneratedDebugSymbol>
+    <ExcludeApp_Data>true</ExcludeApp_Data>
+    <PublishDatabases>false</PublishDatabases>
+    <PackageAsSingleFile>false</PackageAsSingleFile>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <FilesToIncludeForPublish>AllFilesInProjectFolder</FilesToIncludeForPublish>
+    <PublishDatabases>false</PublishDatabases>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>appicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Prince">
+      <HintPath>..\..\library\prince-dotnet-r7\Prince.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="404.aspx" />
+    <Content Include="404.htm" />
+    <Content Include="appicon.ico" />
+    <Content Include="controls\caching\CachedTime.ascx" />
+    <Content Include="controls\caching\Time.ascx" />
+    <Content Include="controls\cookies\CookieDemo.ascx" />
+    <Content Include="controls\delegates\Skeet.ascx" />
+    <Content Include="controls\events\EventsDemo1.ascx" />
+    <Content Include="controls\googlemaps\GoogleDemo1.ascx" />
+    <Content Include="controls\googlemaps\GoogleDemo2.ascx" />
+    <Content Include="controls\interfaces\InterfaceDemo1.ascx" />
+    <Content Include="controls\IO\CookieDemo.ascx" />
+    <Content Include="controls\lambda\Lambda1.ascx" />
+    <Content Include="controls\LINQ\Linq1.ascx" />
+    <Content Include="controls\LINQ\Linq2.ascx" />
+    <Content Include="controls\request\Path.ascx" />
+    <Content Include="controls\request\ServerVariables.ascx" />
+    <Content Include="controls\response\Response.ascx" />
+    <Content Include="controls\servercontrols\AddingDynamicControls.ascx" />
+    <Content Include="favicon.ico" />
+    <Content Include="include\css\default.css" />
+    <Content Include="include\css\thinkatron.css" />
+    <Content Include="include\css\winxp.blue.css" />
+    <Content Include="include\ctl\Breadcrumb.ascx" />
+    <Content Include="include\ctl\Copyright.ascx" />
+    <Content Include="include\ctl\DirectoryMenuer.ascx" />
+    <Content Include="include\ctl\LoginBox.ascx" />
+    <Content Include="include\ctl\PagesInCurrentFolder.ascx" />
+    <Content Include="include\ctl\SourceViewer.ascx" />
+    <Content Include="include\ctl\stdBtmFooter.ascx" />
+    <Content Include="include\ctl\stdHeader.ascx" />
+    <Content Include="include\ctl\stdLHM.ascx" />
+    <Content Include="include\img\appicon.ico" />
+    <Content Include="include\img\aspcustomevents.png" />
+    <Content Include="include\img\BoxBottom.jpg" />
+    <Content Include="include\img\BoxTop.jpg" />
+    <Content Include="include\img\clockworks.jpg" />
+    <Content Include="include\img\left_bg.jpg" />
+    <Content Include="include\img\mcts.jpg" />
+    <Content Include="include\img\pagebox_01.jpg" />
+    <Content Include="include\img\pagebox_02.jpg" />
+    <Content Include="include\img\pagebox_03.jpg" />
+    <Content Include="include\img\pagebox_04.jpg" />
+    <Content Include="include\img\pagebox_05.jpg" />
+    <Content Include="include\img\pagebox_06.jpg" />
+    <Content Include="include\img\right_bg.jpg" />
+    <Content Include="include\img\sortasc.gif" />
+    <Content Include="include\img\sortdesc.gif" />
+    <Content Include="include\img\spacer.gif" />
+    <Content Include="include\img\spcr883horiz.jpg" />
+    <Content Include="include\img\tclogo.jpg" />
+    <Content Include="include\img\thermometer.gif" />
+    <Content Include="include\img\thinkatron_logo.jpg" />
+    <Content Include="include\img\up.jpg" />
+    <Content Include="include\img\zip.gif" />
+    <Content Include="include\img\zipicon.png" />
+    <Content Include="include\img\zipiconFullSize.png" />
+    <Content Include="include\js\DirectoryMenuer.js" />
+    <Content Include="include\js\jquery-1.3.2.min.js" />
+    <Content Include="include\js\jquery-ui-1.8.16.custom.min.js" />
+    <Content Include="include\js\sourceviewer.js" />
+    <Content Include="include\js\SourceViewerCtl.js" />
+    <Content Include="include\master\main.Master" />
+    <Content Include="include\master\SectionHome.Master" />
+    <Content Include="pages\caching\DataCaching.aspx" />
+    <Content Include="pages\caching\Default.aspx" />
+    <Content Include="pages\caching\FragmentCaching.aspx" />
+    <Content Include="pages\caching\OutputCaching.aspx" />
+    <Content Include="pages\databound\Repeater.aspx" />
+    <Content Include="pages\databound\TreeView.aspx" />
+    <Content Include="pages\Default.aspx" />
+    <Content Include="pages\events\Events1.aspx" />
+    <Content Include="pages\googlemaps\Demo2.aspx" />
+    <Content Include="pages\googlemaps\Default.aspx" />
+    <Content Include="pages\googlemaps\Demo1.aspx" />
+    <Content Include="pages\httphandler\Default.aspx" />
+    <Content Include="pages\interfaces\Default.aspx" />
+    <Content Include="pages\interfaces\InterfaceDemo1.aspx" />
+    <Content Include="pages\lambda\Default.aspx" />
+    <Content Include="pages\lambda\Lambda1.aspx" />
+    <Content Include="pages\LINQ\Default.aspx" />
+    <Content Include="pages\Prince\Default.aspx" />
+    <Content Include="pages\reflection\ClassExplorer.aspx" />
+    <Content Include="pages\reflection\Default.aspx" />
+    <Content Include="pages\response\ThePageHeader.aspx" />
+    <Content Include="pages\request\Default.aspx" />
+    <Content Include="pages\servercontrols\AddingControlsDynamically.aspx" />
+    <Content Include="pages\lifecycle\PageControlTree.aspx" />
+    <Content Include="pages\lifecycle\PageLifeCycle.aspx" />
+    <Content Include="pages\request\Request.aspx" />
+    <Content Include="pages\response\Default.aspx" />
+    <Content Include="SourceViewerCtl\Default.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="404.aspx.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="404.aspx.designer.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\caching\CachedTime.ascx.cs">
+      <DependentUpon>CachedTime.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\caching\CachedTime.ascx.designer.cs">
+      <DependentUpon>CachedTime.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\caching\Time.ascx.cs">
+      <DependentUpon>Time.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\caching\Time.ascx.designer.cs">
+      <DependentUpon>Time.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\cookies\CookieDemo.ascx.cs">
+      <DependentUpon>CookieDemo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\cookies\CookieDemo.ascx.designer.cs">
+      <DependentUpon>CookieDemo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\databound\classes\Car.cs" />
+    <Compile Include="controls\databound\GridView.ascx.cs">
+      <DependentUpon>GridView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\databound\GridView.ascx.designer.cs">
+      <DependentUpon>GridView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\databound\Repeater.ascx.cs">
+      <DependentUpon>Repeater.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\databound\Repeater.ascx.designer.cs">
+      <DependentUpon>Repeater.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\databound\TreeView.ascx.cs">
+      <DependentUpon>TreeView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\databound\TreeView.ascx.designer.cs">
+      <DependentUpon>TreeView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\delegates\Skeet.ascx.cs">
+      <DependentUpon>Skeet.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\delegates\Skeet.ascx.designer.cs">
+      <DependentUpon>Skeet.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\events\EventsDemo1.ascx.cs">
+      <DependentUpon>EventsDemo1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\events\EventsDemo1.ascx.designer.cs">
+      <DependentUpon>EventsDemo1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\events\TemperatureChangedEventArgs.cs" />
+    <Compile Include="controls\googlemaps\GoogleDemo1.ascx.cs">
+      <DependentUpon>GoogleDemo1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\googlemaps\GoogleDemo1.ascx.designer.cs">
+      <DependentUpon>GoogleDemo1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\googlemaps\GoogleDemo2.ascx.cs">
+      <DependentUpon>GoogleDemo2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\googlemaps\GoogleDemo2.ascx.designer.cs">
+      <DependentUpon>GoogleDemo2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\interfaces\InterfaceDemo1.ascx.cs">
+      <DependentUpon>InterfaceDemo1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\interfaces\InterfaceDemo1.ascx.designer.cs">
+      <DependentUpon>InterfaceDemo1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\IO\CookieDemo.ascx.cs">
+      <DependentUpon>CookieDemo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\IO\CookieDemo.ascx.designer.cs">
+      <DependentUpon>CookieDemo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\lambda\Lambda1.ascx.cs">
+      <DependentUpon>Lambda1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\lambda\Lambda1.ascx.designer.cs">
+      <DependentUpon>Lambda1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\LINQ\Linq1.ascx.cs">
+      <DependentUpon>Linq1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\LINQ\Linq1.ascx.designer.cs">
+      <DependentUpon>Linq1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\LINQ\Linq2.ascx.cs">
+      <DependentUpon>Linq2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\LINQ\Linq2.ascx.designer.cs">
+      <DependentUpon>Linq2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\networking\GetPost.ascx.cs">
+      <DependentUpon>GetPost.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\networking\GetPost.ascx.designer.cs">
+      <DependentUpon>GetPost.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\request\Path.ascx.cs">
+      <DependentUpon>Path.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\request\Path.ascx.designer.cs">
+      <DependentUpon>Path.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\request\ServerVariables.ascx.cs">
+      <DependentUpon>ServerVariables.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\request\ServerVariables.ascx.designer.cs">
+      <DependentUpon>ServerVariables.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\response\Response.ascx.cs">
+      <DependentUpon>Response.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\response\Response.ascx.designer.cs">
+      <DependentUpon>Response.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\servercontrols\AddingDynamicControls.ascx.cs">
+      <DependentUpon>AddingDynamicControls.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\servercontrols\AddingDynamicControls.ascx.designer.cs">
+      <DependentUpon>AddingDynamicControls.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\usercontrols\IntegUserControl.ascx.cs">
+      <DependentUpon>IntegUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\usercontrols\IntegUserControl.ascx.designer.cs">
+      <DependentUpon>IntegUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\usercontrols\UserControl.ascx.cs">
+      <DependentUpon>UserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\usercontrols\UserControl.ascx.designer.cs">
+      <DependentUpon>UserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\viewstate\Default.ascx.cs">
+      <DependentUpon>Default.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\viewstate\Default.ascx.designer.cs">
+      <DependentUpon>Default.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="include\classes\BaseControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="include\classes\BaseMaster.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="include\classes\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="include\classes\WebUtils.cs" />
+    <Compile Include="include\ctl\Breadcrumb.ascx.cs">
+      <DependentUpon>Breadcrumb.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="include\ctl\Breadcrumb.ascx.designer.cs">
+      <DependentUpon>Breadcrumb.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="include\ctl\Copyright.ascx.cs">
+      <DependentUpon>Copyright.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="include\ctl\Copyright.ascx.designer.cs">
+      <DependentUpon>Copyright.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="include\ctl\DirectoryMenuer.ascx.cs">
+      <DependentUpon>DirectoryMenuer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="include\ctl\DirectoryMenuer.ascx.designer.cs">
+      <DependentUpon>DirectoryMenuer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="include\ctl\LoginBox.ascx.cs">
+      <DependentUpon>LoginBox.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="include\ctl\LoginBox.ascx.designer.cs">
+      <DependentUpon>LoginBox.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="include\ctl\PagesInCurrentFolder.ascx.cs">
+      <DependentUpon>PagesInCurrentFolder.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="include\ctl\PagesInCurrentFolder.ascx.designer.cs">
+      <DependentUpon>PagesInCurrentFolder.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="include\ctl\SourceViewer.ascx.cs">
+      <DependentUpon>SourceViewer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="include\ctl\SourceViewer.ascx.designer.cs">
+      <DependentUpon>SourceViewer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="include\ctl\stdBtmFooter.ascx.cs">
+      <DependentUpon>stdBtmFooter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="include\ctl\stdBtmFooter.ascx.designer.cs">
+      <DependentUpon>stdBtmFooter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="include\ctl\stdHeader.ascx.cs">
+      <DependentUpon>stdHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="include\ctl\stdHeader.ascx.designer.cs">
+      <DependentUpon>stdHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="include\ctl\stdLHM.ascx.cs">
+      <DependentUpon>stdLHM.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="include\ctl\stdLHM.ascx.designer.cs">
+      <DependentUpon>stdLHM.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="include\master\main.Master.cs">
+      <DependentUpon>main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="include\master\main.Master.designer.cs">
+      <DependentUpon>main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="include\master\SectionHome.Master.cs">
+      <DependentUpon>SectionHome.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="include\master\SectionHome.Master.designer.cs">
+      <DependentUpon>SectionHome.Master</DependentUpon>
+    </Compile>
+    <Compile Include="include\master\SourceViewer.Master.cs">
+      <DependentUpon>SourceViewer.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="include\master\SourceViewer.Master.designer.cs">
+      <DependentUpon>SourceViewer.Master</DependentUpon>
+    </Compile>
+    <Compile Include="include\master\Transparent.Master.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Transparent.Master</DependentUpon>
+    </Compile>
+    <Compile Include="include\master\Transparent.Master.designer.cs">
+      <DependentUpon>Transparent.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pages\caching\DataCaching.aspx.cs">
+      <DependentUpon>DataCaching.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\caching\DataCaching.aspx.designer.cs">
+      <DependentUpon>DataCaching.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\caching\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\caching\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\caching\FragmentCaching.aspx.cs">
+      <DependentUpon>FragmentCaching.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\caching\FragmentCaching.aspx.designer.cs">
+      <DependentUpon>FragmentCaching.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\caching\OutputCaching.aspx.cs">
+      <DependentUpon>OutputCaching.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\caching\OutputCaching.aspx.designer.cs">
+      <DependentUpon>OutputCaching.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\databound\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\databound\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\IO\DirectoryExplorer.ascx.cs">
+      <DependentUpon>DirectoryExplorer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\IO\DirectoryExplorer.ascx.designer.cs">
+      <DependentUpon>DirectoryExplorer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\IO\FileIO.ascx.cs">
+      <DependentUpon>FileIO.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\IO\FileIO.ascx.designer.cs">
+      <DependentUpon>FileIO.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\IO\FileUpload.ascx.cs">
+      <DependentUpon>FileUpload.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\IO\FileUpload.ascx.designer.cs">
+      <DependentUpon>FileUpload.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\IO\Streams.ascx.cs">
+      <DependentUpon>Streams.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\IO\Streams.ascx.designer.cs">
+      <DependentUpon>Streams.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\networking\GetWebpage.ascx.cs">
+      <DependentUpon>GetWebpage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\networking\GetWebpage.ascx.designer.cs">
+      <DependentUpon>GetWebpage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\networking\Networking.ascx.cs">
+      <DependentUpon>Networking.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\networking\Networking.ascx.designer.cs">
+      <DependentUpon>Networking.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\session\SessionDemo.ascx.cs">
+      <DependentUpon>SessionDemo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\session\SessionDemo.ascx.designer.cs">
+      <DependentUpon>SessionDemo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\cs\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\cs\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\databound\GridView.aspx.cs">
+      <DependentUpon>GridView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\databound\GridView.aspx.designer.cs">
+      <DependentUpon>GridView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\databound\Repeater.aspx.cs">
+      <DependentUpon>Repeater.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\databound\Repeater.aspx.designer.cs">
+      <DependentUpon>Repeater.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\databound\TreeView.aspx.cs">
+      <DependentUpon>TreeView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\databound\TreeView.aspx.designer.cs">
+      <DependentUpon>TreeView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\delegates\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\delegates\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\delegates\Skeet.aspx.cs">
+      <DependentUpon>Skeet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\delegates\Skeet.aspx.designer.cs">
+      <DependentUpon>Skeet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\events\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\events\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\events\Events1.aspx.cs">
+      <DependentUpon>Events1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\events\Events1.aspx.designer.cs">
+      <DependentUpon>Events1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\events\Product.cs" />
+    <Compile Include="pages\googlemaps\Demo2.aspx.cs">
+      <DependentUpon>Demo2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\googlemaps\Demo2.aspx.designer.cs">
+      <DependentUpon>Demo2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\googlemaps\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\googlemaps\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\googlemaps\Demo1.aspx.cs">
+      <DependentUpon>Demo1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\googlemaps\Demo1.aspx.designer.cs">
+      <DependentUpon>Demo1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\httphandler\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\httphandler\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\httphandler\DemoHandler1.ashx.cs">
+      <DependentUpon>DemoHandler1.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\httphandler\ImageHandler.ashx.cs">
+      <DependentUpon>ImageHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\interfaces\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\interfaces\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\interfaces\InterfaceDemo1.aspx.cs">
+      <DependentUpon>InterfaceDemo1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\interfaces\InterfaceDemo1.aspx.designer.cs">
+      <DependentUpon>InterfaceDemo1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\io\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\io\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\io\DirectoryExplorer.aspx.cs">
+      <DependentUpon>DirectoryExplorer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\io\DirectoryExplorer.aspx.designer.cs">
+      <DependentUpon>DirectoryExplorer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\io\FileIO.aspx.cs">
+      <DependentUpon>FileIO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\io\FileIO.aspx.designer.cs">
+      <DependentUpon>FileIO.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\io\FileUpload.aspx.cs">
+      <DependentUpon>FileUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\io\FileUpload.aspx.designer.cs">
+      <DependentUpon>FileUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\io\Streams.aspx.cs">
+      <DependentUpon>Streams.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\io\Streams.aspx.designer.cs">
+      <DependentUpon>Streams.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\lambda\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\lambda\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\lambda\Lambda1.aspx.cs">
+      <DependentUpon>Lambda1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\lambda\Lambda1.aspx.designer.cs">
+      <DependentUpon>Lambda1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\lifecycle\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\lifecycle\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\cookies\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\cookies\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\LINQ\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\LINQ\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\networking\GetPost.aspx.cs">
+      <DependentUpon>GetPost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\networking\GetPost.aspx.designer.cs">
+      <DependentUpon>GetPost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\networking\GetWebpage.aspx.cs">
+      <DependentUpon>GetWebpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\networking\GetWebpage.aspx.designer.cs">
+      <DependentUpon>GetWebpage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\networking\Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\networking\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Prince\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Prince\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\reflection\ClassExplorer.aspx.cs">
+      <DependentUpon>ClassExplorer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\reflection\ClassExplorer.aspx.designer.cs">
+      <DependentUpon>ClassExplorer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\reflection\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\reflection\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\response\ThePageHeader.aspx.cs">
+      <DependentUpon>ThePageHeader.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\response\ThePageHeader.aspx.designer.cs">
+      <DependentUpon>ThePageHeader.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\request\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\request\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\servercontrols\AddingControlsDynamically.aspx.cs">
+      <DependentUpon>AddingControlsDynamically.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\servercontrols\AddingControlsDynamically.aspx.designer.cs">
+      <DependentUpon>AddingControlsDynamically.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\lifecycle\PageControlTree.aspx.cs">
+      <DependentUpon>PageControlTree.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\lifecycle\PageControlTree.aspx.designer.cs">
+      <DependentUpon>PageControlTree.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\lifecycle\PageLifeCycle.aspx.cs">
+      <DependentUpon>PageLifeCycle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\lifecycle\PageLifeCycle.aspx.designer.cs">
+      <DependentUpon>PageLifeCycle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\request\Request.aspx.cs">
+      <DependentUpon>Request.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\request\Request.aspx.designer.cs">
+      <DependentUpon>Request.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\response\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\response\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\servercontrols\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\servercontrols\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\session\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\session\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\userControls\Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\userControls\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\userControls\IntegUserControl.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>IntegUserControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\userControls\IntegUserControl.aspx.designer.cs">
+      <DependentUpon>IntegUserControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\userControls\UserControl.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>UserControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\userControls\UserControl.aspx.designer.cs">
+      <DependentUpon>UserControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\viewstate\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\viewstate\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="SourceViewer.ashx.cs">
+      <DependentUpon>SourceViewer.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="SourceViewerCtl\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SourceViewerCtl\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="controls\databound\GridView.ascx" />
+    <Content Include="controls\databound\Repeater.ascx" />
+    <Content Include="controls\databound\TreeView.ascx" />
+    <Content Include="controls\networking\GetPost.ascx" />
+    <Content Include="controls\usercontrols\IntegUserControl.ascx" />
+    <Content Include="controls\usercontrols\UserControl.ascx" />
+    <Content Include="controls\viewstate\Default.ascx" />
+    <Content Include="pages\databound\Default.aspx" />
+    <Content Include="controls\IO\DirectoryExplorer.ascx" />
+    <Content Include="controls\IO\FileIO.ascx" />
+    <Content Include="controls\IO\FileUpload.ascx" />
+    <Content Include="controls\IO\Streams.ascx" />
+    <Content Include="controls\networking\GetWebpage.ascx" />
+    <Content Include="controls\networking\Networking.ascx" />
+    <Content Include="controls\session\SessionDemo.ascx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Logout.aspx" />
+    <Content Include="pages\cs\Default.aspx" />
+    <Content Include="pages\databound\GridView.aspx" />
+    <Content Include="pages\delegates\Default.aspx" />
+    <Content Include="pages\delegates\Skeet.aspx" />
+    <Content Include="pages\events\Default.aspx" />
+    <Content Include="pages\io\Default.aspx" />
+    <Content Include="pages\io\DirectoryExplorer.aspx" />
+    <Content Include="pages\io\FileIO.aspx" />
+    <Content Include="pages\io\FileUpload.aspx" />
+    <Content Include="pages\io\Streams.aspx" />
+    <Content Include="pages\lifecycle\Default.aspx" />
+    <Content Include="pages\cookies\Default.aspx" />
+    <Content Include="pages\networking\GetPost.aspx" />
+    <Content Include="pages\networking\GetWebpage.aspx" />
+    <Content Include="pages\networking\Default.aspx" />
+    <Content Include="pages\servercontrols\Default.aspx" />
+    <Content Include="pages\session\Default.aspx" />
+    <Content Include="pages\userControls\Default.aspx" />
+    <Content Include="pages\userControls\IntegUserControl.aspx" />
+    <Content Include="pages\userControls\UserControl.aspx" />
+    <Content Include="pages\viewstate\Default.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="demofiles\folder1\" />
+    <Folder Include="demofiles\upload\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="pages\httphandler\DemoHandler1.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="pages\httphandler\ImageHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SourceViewer.ashx" />
+    <Content Include="include\master\SourceViewer.Master" />
+    <Content Include="include\master\Transparent.Master" />
+    <None Include="princeLog.log" />
+    <None Include="Web.dev.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ThinkatronicUtils\ThinkatronicUtils\ThinkatronicUtils.csproj">
+      <Project>{FE8C4954-5817-408F-8685-D2AA75A67970}</Project>
+      <Name>ThinkatronicUtils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TransparentWebLib\transparentLib.csproj">
+      <Project>{F3664207-5979-4584-8D16-FEF23990A146}</Project>
+      <Name>transparentLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49187</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,524 @@
+body
+{
+    font-family: Arial, Helvetica, Sans-Serif;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: .4em;
+    font-family: Tahoma, Verdana, Sans-Serif;
+    margin: 1em;
+}
+
+A
+{
+    text-decoration: none;
+}
+
+A:hover
+{
+    text-decoration: underline;
+}
+
+A.bodyLink
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    text-decoration: none;
+}
+A.bodyLink:hover
+{
+    text-decoration: underline;
+    color: #FF9900;
+}
+A.tmLink
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #FF9900;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 3px;
+}
+
+A.tmLink:hover
+{
+    background-color: #FF9900;
+    padding: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+SPAN.lhmHeader
+{
+    cursor: pointer;
+    margin-left: 1em;
+    font-weight: bold;
+    color: #ff6600;
+    font-family: Verdana, Sans-Serif;
+}
+
+A.aCrumb
+{
+    font-size: 9px;
+    color: #FF6600;
+}
+
+A.lhm, A.lhm:visited
+{
+    margin-left: 2em;
+    text-decoration: none;
+    font-size: 10px;
+    color: #FF6600;
+}
+
+A.lhm:hover
+{
+    text-decoration: none;
+    color: #000;
+}
+
+A.copyright
+{
+    text-decoration: none;
+    color: #000;
+    font-size: 10px;
+}
+A.copyright:visited
+{
+    color: #000;
+}
+
+A.copyright:hover
+{
+    color: #FF6600;
+}
+
+.bigTxt
+{
+    font-size: 11px;
+    color: #000000;
+}
+.bold
+{
+    font-weight: bold;
+}
+.bodyBig
+{
+    font-size: 12px;
+    color: #FF6600;
+}
+.bordered
+{
+    border: 1px solid #FFFFFF;
+    padding: .5em;
+}
+.bordered:hover
+{
+    border: 1px solid #FF6600;
+}
+
+
+.copyright
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+}
+
+DIV.floatDivShow
+{
+    background-color: #FFFFFF;
+    color: #333333;
+    width: 400px;
+    z-index: 100;
+    overflow: hidden;
+    border: 1px solid #ff6600;
+    text-align: left;
+    visibility: visible;
+    display: inline;
+    font-size: 10px;
+    padding: 2em;
+}
+
+DIV.floatDiv
+{
+    background-color: #FFFFFF;
+    color: #000099;
+    visibility: collapse;
+    display: none;
+}
+.errorTxt
+{
+    font-size: 11px;
+    color: #Ff0000;
+}
+
+.footerTr
+{
+    height: 4em;
+    vertical-align: bottom;
+}
+
+.footerTd
+{
+    vertical-align: bottom;
+    text-align: center;
+}
+.formLabel
+{
+    font-size: .68em;
+    padding-right: 1em;
+}
+.formInput
+{
+    font-size: 10px;
+    color: #0066CC;
+}
+
+.hidden
+{
+    visibility: hidden;
+}
+/*Header styles*/
+H1, H2, H3, H4, H5, H6
+{
+    margin: 0px;
+    padding-bottom: 0px;
+}
+
+H1
+{
+    font-size: 18px;
+}
+
+H2
+{
+    font-size: 16px;
+}
+
+H3
+{
+    font-size: 14px;
+    font-weight: bold;
+}
+H4
+{
+    font-size: 13px;
+}
+H5
+{
+    font-size: 12px;
+    font-weight: bold;
+}
+H6
+{
+    font-size: 11px;
+    font-weight: bold;
+}
+BUTTON, INPUT, TEXTAREA
+{
+    font-size: 11px;
+    background-color: #FFF;
+    border: 1px #0066cc solid;
+}
+INPUT[type='text']
+{
+}
+BUTTON, INPUT[type='submit']
+{
+    font-weight: bold;
+    color: #0066cc;
+}
+
+
+INPUT.formButton
+{
+    font-size: .6em;
+    background-color: #fff;
+}
+
+
+
+LI
+{
+    font-size: 11px;
+}
+
+
+
+.orange
+{
+    color: #ff6600;
+}
+SPAN
+{
+    /*    font-size: 11px; */
+    font-size: 62.5%;
+}
+P
+{
+    font-family: Arial;
+    font-size: 62.5%;
+    font-family: Tahoma, Verdana, Sans-Serif;
+}
+
+.body
+{
+    font-size: 11px;
+}
+
+A.sectionLnk
+{
+    color: #ff6600;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+A.sectionLnk:hover
+{
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FF0000;
+    text-decoration: none;
+}
+TH
+{
+    font-size: 11px;
+}
+TH, TD
+{
+    font-weight: normal;
+    padding: 0px;
+    margin: 0px;
+    vertical-align: top;
+}
+
+.sectionLnk
+{
+    color: #ff6600;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.valMessage
+{
+    text-align: center;
+    font-size: 11px;
+    color: #FF0000;
+}
+
+.txtImg
+{
+    float: left;
+    padding-right: 1em;
+}
+
+
+/* ID styles */
+#flashDivHome
+{
+    text-align: center;
+    padding: 0px;
+    padding-top: 1em;
+    padding-bottom: 1.3em;
+    border: none;
+    height: 300px;
+}
+
+.layoutTbl
+{
+    border: 1px solid transparent;
+}
+
+#introDiv
+{
+    height: 600px;
+    background-position: left top;
+    background-image: url('../img/clockworks.jpg');
+    background-repeat: repeat-x;
+    color: #FFF;
+    font-size: 24px;
+}
+
+.loginDiv
+{
+    float: right;
+}
+
+.divSrcView
+{
+    border: 1px solid #FFf;
+    font-family: Tahoma, Verdana, Sans-Serif;
+    font-size: 9px;
+    padding: 0em;
+    width: 20em;
+}
+.divSrcViewContainer
+{
+    border: 0px;
+    padding: 0px;
+    float: left;
+    width: 8em;
+}
+.SrcViewTitle
+{
+    padding: none;
+    margin: none;
+    color: #ff6600;
+    font-size: 9px;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+.srcLink
+{
+    color: #0066CC;
+    font-size: .8em;
+    font-weight: bold;
+}
+
+A.sourceA, A.SourceA:visited
+{
+    padding-top: .2em;
+    font-size: 9px;
+    color: #000;
+    font-weight: lighter;
+    text-decoration: none;
+}
+
+A.sourceA:hover
+{
+    color: #FFF;
+    background-color: #FF6600;
+}
+
+#bodyDiv
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    border: 1px solid #000;
+}
+#bodyTable
+{
+    width: 100%;
+    border: 1px dashed red;
+}
+#PgeDiv1
+{
+    width: 100%;
+    text-align: center;
+}
+#PgeDiv2
+{
+    width: 97%;
+    text-align: left;
+}
+
+#divLoginBox
+{
+}
+
+.ErrorMsg
+{
+    font-size: .8em;
+    color: Red;
+}
+
+.ErrorLbl
+{
+    font-size: .7em;
+    color: #0066CC;
+}
+.invisi
+{
+    display: none;
+    visibility: hidden;
+}
+
+.visi
+{
+    display: inline;
+    visibility: visible;
+}
+
+
+.transparentLogo
+{
+    color: #000;
+    font-weight: bold;
+    font-family: Verdana;
+    font-size: 1em;
+}
+.oLogo, .tLogo
+{
+    cursor: pointer;
+    vertical-align: sub;
+}
+
+.pageSectionDiv
+{
+    border: 1px solid #0066CC;
+    padding: 1em;
+    margin: 1em;
+    width: 26em;
+}
+
+#DirectoryListUL
+{
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    list-style-image: none;
+    list-style-position: inside;
+}
+#FileListUL
+{
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 1em;
+    list-style-type: none;
+    list-style-image: none;
+    list-style-position: inside;
+}
+
+#divDirMenu
+{
+    width:100%;
+    height: 100%;
+    overflow: auto;
+    margin-bottom: .5em;
+}
+
+/* SourceView Panel*/
+#divSourcePanel
+{
+    border: 1px solid #999;
+    font-size: 10px;
+    overflow: auto;
+    font-family:Courier New, Fixedsys;
+    background-color:#ccc;
+    width:800px;
+    height:200px;
+}
+
+#AToggleFolders{
+    color:orange;
+    background-color:#fff;
+    border:1px solid orange;
+    font-size:9px;
+    padding:.2em;
+}
+
+#AToggleFolders:hover{
+    background-color:Orange;
+    border:1px solid #fff;
+    color:#FFF;
+}
+
+#divSourceText{
+    text-align:left;
+    color:#000;
+    width:100%;
+}
