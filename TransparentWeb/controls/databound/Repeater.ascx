@@ -16,7 +16,7 @@
                         Email
                     </th>
                     <th>
-                        <asp:Button runat="server" ID="tstbtn" Text="Test" CommandArgument="test" CommandName="test" />
+                        <asp:Button runat="server" ID="tstbtn" CssClass="btn" Text="Test" CommandArgument="test" CommandName="test" />
                     </th>
                 </tr>
             </thead>
@@ -38,8 +38,8 @@
                     <%# Eval("Email") %></span>
             </td>
             <td>
-                <asp:Button runat="server" ID="btnEdit" Text="Edit" CommandName="Edit" CommandArgument='<%# Eval("ID") %>' />
-                <asp:Button runat="server" ID="Button1" Text="Delete" CommandName="Delete" CommandArgument='<%# Eval("ID") %>' />
+                <asp:Button cssclass="btn" runat="server" ID="btnEdit" Text="Edit" CommandName="Edit" CommandArgument='<%# Eval("ID") %>' />
+                <asp:Button cssclass="btn" runat="server" ID="Button1" Text="Delete" CommandName="Delete" CommandArgument='<%# Eval("ID") %>' />
             </td>
         </tr>
     </ItemTemplate>
@@ -56,7 +56,7 @@
                 <asp:TextBox runat="server" ID="txtEmail" />
             </td>
             <td>
-                <asp:Button runat="server" ID="btnAdd" Text="Add" CommandArgument="Add" CommandName="Add" />
+                <asp:Button cssclass="btn" runat="server" ID="btnAdd" Text="Add" CommandArgument="Add" CommandName="Add" />
                 <input type="reset" value="Reset" />
             </td>
         </tr>

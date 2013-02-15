@@ -31,7 +31,7 @@
                      </tr>
                      <tr>
                         <td align="right" colspan="2">
-                           <asp:button id="btnAddSession" runat="server" cssclass="formButton" onclick="btnAddSession_Click"
+                           <asp:button id="btnAddSession" runat="server" cssclass="btn" onclick="btnAddSession_Click"
                               text="Add Session Variable" />
                         </td>
                         <td>
@@ -52,7 +52,7 @@
                <asp:listbox id="lbSessions" runat="server" tooltip="Current Session Variables"></asp:listbox>
                <br />
                <div style="text-align: right;">
-                  <asp:button id="btnDelSession" runat="server" cssclass="formButton" onclick="btnDelSession_Click"
+                  <asp:button id="btnDelSession" runat="server" cssclass="btn" onclick="btnDelSession_Click"
                      text="Delete Session" />
                </div>
             </td>

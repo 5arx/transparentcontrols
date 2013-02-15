@@ -33,7 +33,7 @@
                   cssclass="" text="Can't save without a filename" />
             </p>
             <p>
-               <asp:button id="btnWriteToFile" runat="server" onclick="btnWriteToFile_Click" text="Write to File" />
+               <asp:button CssClass="btn" id="btnWriteToFile" runat="server" onclick="btnWriteToFile_Click" text="Write to File" />
             </p>
          </td>
          <td>

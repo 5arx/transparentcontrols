@@ -11,57 +11,78 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
         <asp:ContentPlaceHolder ID="HTMLTitlePlaceHolder" runat="server" />
     </title>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="/include/js/jquery-ui-1.8.16.custom.min.js"></script>
     <script type="text/javascript" src="/include/js/DirectoryMenuer.js"></script>
-    <link rel="stylesheet" type="text/css" href="/include/css/default.css" />
+    <%--<link rel="stylesheet" type="text/css" href="/include/css/default.css" />--%>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css" rel="stylesheet">
+    <script src="http//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
 </head>
 <body>
     <form id="form2" runat="server">
-    <div id="pageDiv">
-        <!-- Start Body Menu -->
-        <div id="bodyDiv">
-            <!-- Start Top Menu -->
-            <uc3:stdHeader ID="StdHeader1" runat="server"></uc3:stdHeader>
-            <!-- End Top Menu -->
-            <table id="bodyTable" border="1">
-                <tr>
-                    <td colspan="2">
-                        <asp:ContentPlaceHolder ID="TitlePlaceHolder" runat="server" />
-                        <uc5:Breadcrumb ID="Breadcrumb1" runat="server" />
-                        <p>
-                            <a href="#" id="AToggleFolders">Toggle Folders</a>
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td id="tdDirMenu">
-                        <div style="width: 100%; float: left; text-align: left;">
-                            <uc4:DirectoryMenuer ID="DirectoryMenuer1" runat="server" />
-                        </div>
-                    </td>
-                    <td style="width: 85%;">
-                        <asp:Label runat="server" ID="lOut" Width="100%" />
-                        <div style="text-align: left;">
-                            <asp:ContentPlaceHolder ID="phMainBody" runat="server" />
-                        </div>
-                    </td>
-                </tr>
-            </table>
-            <%-- <uc1:stdLHM id="StdLHM1" runat="server" Visible="false" />--%>
-            <uc6:Copyright ID="Copyright1" runat="server" />
-            <asp:ContentPlaceHolder ID="phPageSpecificFooter" runat="server">
-            </asp:ContentPlaceHolder>
-            <uc2:stdBtmFooter ID="StdBtmFooter1" runat="server" />
+        <uc3:stdHeader ID="StdHeader1" runat="server" />
+        <asp:ContentPlaceHolder ID="TitlePlaceHolder" runat="server" />
+        <uc5:Breadcrumb ID="Breadcrumb1" runat="server" />
+        <p>
+            <a href="#" id="AToggleFolders">Toggle Folders</a>
+        </p>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span2">
+                    <!--Sidebar content-->
+                    <uc4:DirectoryMenuer ID="DirectoryMenuer1" runat="server" />
+                </div>
+                <div class="span10">
+                    <!--Body content-->
+                    <asp:Label runat="server" ID="lOut" Width="100%" />
+                    <div style="text-align: left;">
+                        <asp:ContentPlaceHolder ID="phMainBody" runat="server" />
+                    </div>
+                    <asp:ContentPlaceHolder ID="phPageSpecificFooter" runat="server">
+
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span12">
+                <uc6:Copyright ID="Copyright1" runat="server" />
+                </div>
+            </div>
         </div>
-    </div>
+        <div id="pageDiv">
+            <!-- Start Body Menu -->
+            <div id="bodyDiv">
+                <!-- Start Top Menu -->
+
+                <!-- End Top Menu -->
+                <table id="bodyTable" border="1">
+                    <tr>
+                        <td colspan="2">x
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="tdDirMenu">
+                            <div style="width: 100%; float: left; text-align: left;">
+                                x
+                            </div>
+                        </td>
+                        <td style="width: 85%;">x
+                        </td>
+                    </tr>
+                </table>
+                <%-- <uc1:stdLHM id="StdLHM1" runat="server" Visible="false" />--%>
+                
+                </asp:ContentPlaceHolder>
+                <uc2:stdBtmFooter ID="StdBtmFooter1" runat="server" />
+            </div>
+        </div>
     </form>
     <div id="divSourcePanel" style="">
-        <input type="button" id="btnCopySource" value="copy" />
-        <input type="button" id="btnDownloadSource" value="download" />
+        <input type="button" class="btn" id="btnCopySource" value="copy" />
+        <input type="button" class="btn" id="btnDownloadSource" value="download" />
         <div id="divSourceText">
         </div>
     </div>

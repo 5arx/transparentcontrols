@@ -105,7 +105,7 @@
             </div>
             <div>
                 <asp:DropDownList runat="server" ID="ddlZoom" />
-                <button type="button" onclick="zoomTo();">
+                <button type="button" class="btn" onclick="zoomTo();">
                     Zoom</button>
             </div>
         </td>
@@ -114,11 +114,11 @@
 <div id="divToolstrip" style="float: right;">
     <span>Show Address:
         <input type="text" id="txtAddress" size="25" />
-        <button onclick="showAddress();return false;">
+        <button  onclick="showAddress();return false;" class="btn" >
             Show Address</button>
     </span>
     <asp:DropDownList runat="server" ID="ddlCities" />
-    <button type="button" id="btnGo" onclick="goTo();">
+    <button type="button" class="btn" id="btnGo" onclick="goTo();">
         Go</button>
 </div>
 <script type="text/javascript">

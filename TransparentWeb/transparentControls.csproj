@@ -28,6 +28,10 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile />
     <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -88,7 +92,8 @@
     <Content Include="controls\caching\Time.ascx" />
     <Content Include="controls\cookies\CookieDemo.ascx" />
     <Content Include="controls\delegates\Skeet.ascx" />
-    <Content Include="controls\events\EventsDemo1.ascx" />
+    <Content Include="controls\events\Events1.ascx" />
+    <Content Include="controls\events\TemperatureController.ascx" />
     <Content Include="controls\googlemaps\GoogleDemo1.ascx" />
     <Content Include="controls\googlemaps\GoogleDemo2.ascx" />
     <Content Include="controls\interfaces\InterfaceDemo1.ascx" />
@@ -235,14 +240,21 @@
     <Compile Include="controls\delegates\Skeet.ascx.designer.cs">
       <DependentUpon>Skeet.ascx</DependentUpon>
     </Compile>
-    <Compile Include="controls\events\EventsDemo1.ascx.cs">
-      <DependentUpon>EventsDemo1.ascx</DependentUpon>
+    <Compile Include="controls\events\Events1.ascx.cs">
+      <DependentUpon>Events1.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="controls\events\EventsDemo1.ascx.designer.cs">
-      <DependentUpon>EventsDemo1.ascx</DependentUpon>
+    <Compile Include="controls\events\Events1.ascx.designer.cs">
+      <DependentUpon>Events1.ascx</DependentUpon>
     </Compile>
     <Compile Include="controls\events\TemperatureChangedEventArgs.cs" />
+    <Compile Include="controls\events\TemperatureController.ascx.cs">
+      <DependentUpon>TemperatureController.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\events\TemperatureController.ascx.designer.cs">
+      <DependentUpon>TemperatureController.ascx</DependentUpon>
+    </Compile>
     <Compile Include="controls\googlemaps\GoogleDemo1.ascx.cs">
       <DependentUpon>GoogleDemo1.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

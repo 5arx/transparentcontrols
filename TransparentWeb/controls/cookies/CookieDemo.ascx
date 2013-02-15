@@ -43,7 +43,7 @@
                   </tr>
                   <tr>
                      <td align="right" colspan="2">
-                        <asp:button id="btnAddCookie" runat="server" cssclass="formButton" onclick="btnAddCookie_Click"
+                        <asp:button id="btnAddCookie" runat="server" cssclass="btn" onclick="btnAddCookie_Click"
                            text="Add Cookie" />
                      </td>
                      <td>
@@ -63,7 +63,7 @@
             <br />
             <div style="text-align:right;">
                <asp:button id="btnDelCookie" runat="server" onclick="btnDelCookie_Click" 
-                  cssclass="formButton"
+                  cssclass="btn"
                   text="Delete Cookie"/>
             </div>
          </td>

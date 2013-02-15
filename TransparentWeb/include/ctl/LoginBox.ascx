@@ -54,7 +54,7 @@
                       </asp:requiredfieldvalidator>            
                    </td>
                    <td >
-                      <asp:button id="btnLogin" runat="server" cssclass="formButton" onclick="btnLogin_Click"
+                      <asp:button id="btnLogin" runat="server" cssclass="btn" onclick="btnLogin_Click"
                          text="login" />
                    </td>            
                 </tr>

@@ -52,7 +52,7 @@
     </table>
     </FooterTemplate>
 </asp:Repeater>
-<p><input type="button" id="btnToggleAdd" value="Add Record" /></p>
+<p><input type="button" class="btn" id="btnToggleAdd" value="Add Record" /></p>
 
 <div id="divAddRecord">
     <p>Name: <asp:textbox runat="server" ID="txtname" />
@@ -77,6 +77,6 @@
                 <asp:RequiredFieldValidator runat="server" EnableClientScript="true" ControlToValidate="ddlGender" Text="Gender Required"
                  ErrorMessage="Gender required" />
     </p>
-    <p><asp:Button runat="server" ID="btnAdd" Text="Add" /></p>
+    <p><asp:Button runat="server" ID="btnAdd" Text="Add" CssClass="btn" /></p>
 </div>
 <uc1:SourceViewer ID="SourceViewer1" runat="server" />

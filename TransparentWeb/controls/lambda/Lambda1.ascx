@@ -197,10 +197,10 @@
                         </tr>
                         <tr>
                             <td colspan="7" align="center">
-                                <button class="pToggle">
+                                <button class="btn">
                                     Cancel</button>
                                 <asp:Button runat="server" CausesValidation="true" ID="btnAdd" OnClick="btnAdd_Click"
-                                    Text="Add" />
+                                   CssClass="btn" Text="Add" />
                             </td>
                         </tr>
                     </table>

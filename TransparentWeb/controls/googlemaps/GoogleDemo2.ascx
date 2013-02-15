@@ -74,7 +74,7 @@
                 <asp:TextBox runat="server" ID="txtTo" />
             </div>
             <p>
-                <button onclick="showDirections(<%= txtTo.ClientID %>, <%= txtFrom.ClientID %>);return false;">
+                <button class="btn" onclick="showDirections(<%= txtTo.ClientID %>, <%= txtFrom.ClientID %>);return false;">
                     Get Directions</button></p>
         </td>
     </tr>
@@ -82,11 +82,11 @@
 <div id="divToolstrip" style="float: right;">
     <span>Find Address:
         <input type="text" id="txtAddress" size="25" />
-        <button onclick="showAddress();return false;">
+        <button  class="btn" onclick="showAddress();return false;">
             Show Address</button>
     </span>
     <asp:DropDownList runat="server" ID="ddlCities" />
-    <button type="button" id="btnGo" onclick="goTo();">
+    <button type="button" class="btn" id="btnGo" onclick="goTo();">
         Go</button>
 </div>
 <div id="directionsDiv">
