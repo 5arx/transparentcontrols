@@ -16,28 +16,32 @@
         <asp:ContentPlaceHolder ID="HTMLTitlePlaceHolder" runat="server" />
     </title>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <zscript type="text/javascript" src="/include/js/jquery-ui-1.8.16.custom.min.js"></zscript>
+    <%--<zscript type="text/javascript" src="/include/js/jquery-ui-1.8.16.custom.min.js"></zscript>--%>
     <script type="text/javascript" src="/include/js/DirectoryMenuer.js"></script>
     <%--<link rel="stylesheet" type="text/css" href="/include/css/default.css" />--%>
-    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css" rel="stylesheet">
-    <script src="http//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
+   <%--<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css" rel="stylesheet">--%>
+    <%--<script src="http//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>--%>
+
+    <link href="/include/bootstrap/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
 
 </head>
 <body>
     <form id="form2" runat="server">
-        <uc3:stdHeader ID="StdHeader1" runat="server" />
-        <asp:ContentPlaceHolder ID="TitlePlaceHolder" runat="server" />
-        <uc5:Breadcrumb ID="Breadcrumb1" runat="server" />
-        <p>
-            <a href="#" id="AToggleFolders">Toggle Folders</a>
-        </p>
         <div class="container-fluid">
+            <script src="/include/bootstrap/js/bootstrap.min.js"></script>
+            <uc3:stdHeader ID="StdHeader1" runat="server" />
+            <asp:ContentPlaceHolder ID="TitlePlaceHolder" runat="server" />
             <div class="row-fluid">
                 <div class="span2">
                     <!--Sidebar content-->
                     <uc4:DirectoryMenuer ID="DirectoryMenuer1" runat="server" />
                 </div>
                 <div class="span10">
+                    <div class="pull-right">
+                        <uc5:Breadcrumb ID="Breadcrumb1" runat="server" />
+                    </div>
+                    <a href="#" id="AToggleFolders">Toggle Folders</a>
+
                     <!--Body content-->
                     <asp:Label runat="server" ID="lOut" Width="100%" />
                     <div style="text-align: left;">
@@ -47,12 +51,12 @@
 
                 </div>
             </div>
-            <div class="row-fluid">
-                <div class="span12">
-                <uc6:Copyright ID="Copyright1" runat="server" />
-                </div>
-            </div>
         </div>
+        <footer class="footer">
+            <div class="container">
+                <uc6:Copyright ID="Copyright1" runat="server" />
+            </div>
+        </footer>
         <div id="pageDiv">
             <!-- Start Body Menu -->
             <div id="bodyDiv">
@@ -76,17 +80,16 @@
                 </table>
                 <%-- <uc1:stdLHM id="StdLHM1" runat="server" Visible="false" />--%>
                 
-                </asp:ContentPlaceHolder>
                 <uc2:stdBtmFooter ID="StdBtmFooter1" runat="server" />
             </div>
         </div>
 
-    <div id="divSourcePanel" class="modal hide fade" tabindex="-1" role="dialog">
-        <input type="button" class="btn" id="btnCopySource" value="copy" />
-        <input type="button" class="btn" id="btnDownloadSource" value="download" />
-        <div id="divSourceText">
+        <div id="divSourcePanel" class="modal hide fade" tabindex="-1" role="dialog">
+            <input type="button" class="btn" id="btnCopySource" value="copy" />
+            <input type="button" class="btn" id="btnDownloadSource" value="download" />
+            <div id="divSourceText">
+            </div>
         </div>
-    </div>
-    </form> 
-    </body>
+    </form>
+</body>
 </html>
