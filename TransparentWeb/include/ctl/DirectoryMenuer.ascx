@@ -7,10 +7,9 @@
         ImageUrl="/include/img/up.jpg" />
     <asp:Repeater runat="server" ID="rptFiles" OnItemDataBound="rptFiles_ItemDataBound">
         <HeaderTemplate>
-            <br />
-            <span id="lhmHeaderFiles" class="lhmHeader" title="click to hide">Examples</span>
             <div id="divDirMenuFiles">
-                <ul id="FileListUL">
+                <ul id="FileListUL" class="nav nav-list">
+                    <li class="nav-header">Examples</li>
         </HeaderTemplate>
         <FooterTemplate>
                 </ul>
@@ -18,20 +17,20 @@
         </FooterTemplate>
         <ItemTemplate>
             <li>
-                <a class="lhm" runat="server" id="hlPage"><%# Eval("Name") %></a>
+                <a runat="server" id="hlPage"><%# Eval("Name") %></a>
             </li>
         </ItemTemplate>
     </asp:Repeater>
     <asp:Repeater runat="server" ID="rptFolders" OnItemDataBound="rptFolders_ItemDataBound">
         <HeaderTemplate>
             <div>
-                <span id="lhmHeaderSubs" class="lhmHeader" title="click to hide">Sub-Sections</span>
+                <span id="lhmHeaderSubs" class="lhmHeader nav-header" title="click to hide">Sub-Sections</span>
                 <div id="divDirMenuFolders">
-                    <ul id="DirectoryListUL">
+                    <ul id="DirectoryListUL" class="nav nav-list">
         </HeaderTemplate>
         <ItemTemplate>
                     <li>
-                        <asp:HyperLink CssClass="lhm" runat="server" ID="hlPage" Text='<%# Eval("Name") %>' />
+                        <asp:HyperLink runat="server" ID="hlPage" Text='<%# Eval("Name") %>' />
                     </li>
         </ItemTemplate>
         <FooterTemplate>

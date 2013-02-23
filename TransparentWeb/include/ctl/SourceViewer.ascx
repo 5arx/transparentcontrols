@@ -6,11 +6,11 @@
     <span runat="server" id="divSrcViewTitle" class="SrcViewTitle" onclick='toggleit(this.id);'>
         [show source] </span>
     <div runat="server" id="divSrcView" class="divSrcView">
-        <a runat="server" class="sourceA" id="a_SrcMarkup" target="_blank" title="[aspx markup]">
+        <a runat="server" class="sourceA" id="a_SrcMarkup"  title="[aspx markup]">
             [aspx]</a> 
-        <a id="a_SrcCS" runat="server" target="_blank" title="[c# code]" class="sourceA">
+        <a id="a_SrcCS" runat="server" title="[c# code]" class="sourceA">
                 [c#]</a>
-        <a id="a_SrcDesigner" runat="server" target="_blank" title="[c# designer code]"
+        <a id="a_SrcDesigner" runat="server" title="[c# designer code]"
                     class="sourceA">[designer]</a>
         <%--<a id="a_Zip" runat="server" title="[download source]"
             class="sourceA">

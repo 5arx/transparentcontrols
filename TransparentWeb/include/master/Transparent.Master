@@ -16,11 +16,12 @@
         <asp:ContentPlaceHolder ID="HTMLTitlePlaceHolder" runat="server" />
     </title>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="/include/js/jquery-ui-1.8.16.custom.min.js"></script>
+    <zscript type="text/javascript" src="/include/js/jquery-ui-1.8.16.custom.min.js"></zscript>
     <script type="text/javascript" src="/include/js/DirectoryMenuer.js"></script>
     <%--<link rel="stylesheet" type="text/css" href="/include/css/default.css" />--%>
     <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css" rel="stylesheet">
     <script src="http//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
+
 </head>
 <body>
     <form id="form2" runat="server">
@@ -42,7 +43,7 @@
                     <div style="text-align: left;">
                         <asp:ContentPlaceHolder ID="phMainBody" runat="server" />
                     </div>
-                    <asp:ContentPlaceHolder ID="phPageSpecificFooter" runat="server">
+                    <asp:ContentPlaceHolder ID="phPageSpecificFooter" runat="server" />
 
                 </div>
             </div>
@@ -79,12 +80,13 @@
                 <uc2:stdBtmFooter ID="StdBtmFooter1" runat="server" />
             </div>
         </div>
-    </form>
-    <div id="divSourcePanel" style="">
+
+    <div id="divSourcePanel" class="modal hide fade" tabindex="-1" role="dialog">
         <input type="button" class="btn" id="btnCopySource" value="copy" />
         <input type="button" class="btn" id="btnDownloadSource" value="download" />
         <div id="divSourceText">
         </div>
     </div>
-</body>
+    </form> 
+    </body>
 </html>

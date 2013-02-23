@@ -63,7 +63,7 @@ $(document).ready(function () {
         $.fx.speeds._default = 1000;
         $(function () {
             //            var $_srcdialog = $('<div id="divSourcePanel"></div>').dialog({ autoOpen: false, title: 'SourceViewer' });
-
+            /*
             $("#divSourcePanel").dialog({
                 autoopen: false,
                 position: "center",
@@ -81,7 +81,9 @@ $(document).ready(function () {
                 }
 
 
-            });
+            });*/
+            $('#divSourcePanel').modal('show');
+            return false;
         });
 
         //AJaX Call

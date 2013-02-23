@@ -2,11 +2,11 @@
 <%@ OutputCache Duration="120" VaryByParam="none" %>
 <asp:Repeater runat="server" ID="rptCrumbs" onitemdatabound="rptCrumbs_ItemDatabound">
     <HeaderTemplate>
-        <div style="text-align:left;color:#ff6600;font-size:9px;">
+        <ul class="breadcrumb">
     </HeaderTemplate>
-    <ItemTemplate><a runat="server" class='aCrumb' id="a_crumb" ><%# Container.DataItem.ToString().Trim() %></a>&nbsp;&gt;&nbsp;</ItemTemplate>
+    <ItemTemplate><li><a runat="server" id="a_crumb" ><%# Container.DataItem.ToString().Trim() %></a></li><span class="divider">/</span></ItemTemplate>
     <FooterTemplate>
-    </div>
+    </ul>
     </FooterTemplate>
 </asp:Repeater>
 <asp:Label runat="server" ID="lout" />
