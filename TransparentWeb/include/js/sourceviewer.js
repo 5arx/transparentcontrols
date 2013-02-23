@@ -15,8 +15,13 @@ $(document).ready(function () {
     var winSrce = null; //This is the reference to the SourceViewerWindow
     $('#divSourcePanel').hide();
     $("#__AHideSourceViewer").hide();
-    $('.divSrcView').hide();
+    //$('.divSrcView').hide();
     $(".oLogo").hide();
+
+    $('.jsShowSrcPnl').click(function () {
+        $(this).siblings('.divSrcView').popover();
+
+    });
 
     $('#__AToggleSourceView').click(function (evt) {
         if ($(this).text().indexOf("Opaque") > -1) {
@@ -40,11 +45,11 @@ $(document).ready(function () {
     });
 
     $("#__AToggleSourceViewer").click(function (evt) {
-        if ($(this).text().substring(0, 4) == "Hide") {
-            winSrce.close();
-            $(this).text($(this).text().replace('Hide', ''));
-        }
-        else {
+        //if ($(this).text().substring(0, 4) == "Hide") {
+          //  winSrce.close();
+            //$(this).text($(this).text().replace('Hide', ''));
+        //}
+        //else {
             if (winSrce == null || winSrce.closed) {
                 winSrce = window.open("/SourceViewerCtl", "_sourceViewerWindow", 'width=400,height=600,location=no,top=0,left=400,toolbar=no,title=SourceViewer&trade;scrollbars=no', true);
             }
@@ -52,8 +57,8 @@ $(document).ready(function () {
                 winSrce.focus();
             }
 
-            $(this).text("Hide " + $(this).text());
-        }
+            //$(this).text("Hide " + $(this).text());
+        //}
         evt.stopImmediatePropogation();
     });
 
@@ -165,32 +170,34 @@ function showSource(obj) {
     });
 }
 
-function toggleit(objId) {
-    //    alert($(objId));
+//function toggleit(objId) {
+//    //    alert($(objId));
 
-    var div1, div2;
-    div1 = $("#" + objId.replace('Title', ''));
-    div2 = $("#" + objId);
+//    var div1, div2;
+//    div1 = $("#" + objId.replace('Title', ''));
+//    div2 = $("#" + objId);
 
-    //alert(div1.attr("id"));
-    //alert(div2.attr("id"));
+//    //alert(div1.attr("id"));
+//    //alert(div2.attr("id"));
 
-    if (div1.attr('class').match(/divSrcView/gi) && !div1.attr('class').match(/SrcViewTitle/gi)) {
-        //alert('can see div1');
-        //div1.toggle();
-        if (div1.is(':hidden'))
-        { div1.slideDown(900); }
-        else {
-            div1.slideUp(450);
-        }
-        if (div2.text().match(/show source/gi)) {
-            div2.text('[hide]');
-        }
-        else {
-            div2.text('[show source]');
-        }
-    }
-}
+//    //if (div1.attr('class').match(/divSrcView/gi) && !div1.attr('class').match(/SrcViewTitle/gi)) {
+//        //alert('can see div1');
+//        //div1.toggle();
+//        //if (div1.is(':hidden'))
+//        //{ 
+//            div1.popover();
+//            //div1.slideDown(900); }
+//        //else {
+//            div1.slideUp(450);
+//        //}
+//        //if (div2.text().match(/show source/gi)) {
+//        //    div2.text('[hide]');
+//        //}
+//        //else {
+//        //    div2.text('[show source]');
+//        //}
+//    //}
+//}
 
 function ToggleSrceViewVisi(objId) {
     alert($(objId).ToString());
